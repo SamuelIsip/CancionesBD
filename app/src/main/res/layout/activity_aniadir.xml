@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009688"
+    tools:context=".activity_aniadir">
+
+    <include layout="@layout/mitoolbar"></include>
+
+    <ImageView
+        android:id="@+id/imageViewAniadir"
+        android:layout_width="153dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="9dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="verImagenCompleta"
+        app:layout_constraintBottom_toTopOf="@+id/txtLetra"
+        app:layout_constraintEnd_toStartOf="@+id/txtAutor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/camara"
+        tools:srcCompat="@drawable/camara" />
+
+    <EditText
+        android:id="@+id/txtTitulo"
+        android:layout_width="190dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="27dp"
+        android:ems="10"
+        android:hint="Título"
+        android:inputType="textPersonName"
+        android:textColor="#F3EFEF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toEndOf="@+id/imageViewAniadir"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtAutor"
+        android:layout_width="191dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="56dp"
+        android:ems="10"
+        android:hint="Autor"
+        android:inputType="textPersonName"
+        android:textColor="#F3EFEF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/txtLetra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewAniadir" />
+
+    <EditText
+        android:id="@+id/txtLetra"
+        android:layout_width="326dp"
+        android:layout_height="340dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="21dp"
+        android:background="#BCFFFFFF"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Letra de la canción:"
+        android:inputType="textMultiLine"
+        android:textColor="#040404"
+        android:textColorHint="#070707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAniadir" />
+
+    <EditText
+        android:id="@+id/txtTonalidadM"
+        android:layout_width="93dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:hint="Tonalidad"
+        android:inputType="textPersonName"
+        android:textColor="#F3EFEF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/imageViewAniadir"
+        app:layout_constraintTop_toBottomOf="@+id/txtAutor" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLetra">
+
+        <ImageButton
+            android:id="@+id/btnFoto"
+            android:layout_width="64dp"
+            android:layout_height="62dp"
+            android:onClick="hacerFoto"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <ImageButton
+            android:id="@+id/btnInsertar"
+            android:layout_width="64dp"
+            android:layout_height="62dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="insertarDatos"
+            app:srcCompat="@android:drawable/ic_menu_save" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

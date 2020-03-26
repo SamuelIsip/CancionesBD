@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009688"
+    tools:context=".activity_modificar">
+
+    <EditText
+        android:id="@+id/txtTonalidadM"
+        android:layout_width="102dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="114dp"
+        android:ems="10"
+        android:hint="Tonalidad"
+        android:inputType="textPersonName"
+        android:textColor="#F6F2F2"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/imagenViewModificar"
+        app:layout_constraintTop_toBottomOf="@+id/txtAutor" />
+
+    <include layout="@layout/mitoolbar"></include>
+
+    <EditText
+        android:id="@+id/txtBtitulo"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="Título"
+        android:inputType="textPersonName"
+        android:textColor="#F6F2F2"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtAutor"
+        android:layout_width="172dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="44dp"
+        android:ems="10"
+        android:hint="Autor"
+        android:inputType="textPersonName"
+        android:textColor="#F8F6F6"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/imagenViewModificar"
+        app:layout_constraintTop_toBottomOf="@+id/txtBtitulo" />
+
+    <EditText
+        android:id="@+id/txtLetraCnacionM"
+        android:layout_width="341dp"
+        android:layout_height="315dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#BCFFFFFF"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Letra de la canción:"
+        android:inputType="textMultiLine"
+        android:textColor="#0C0C0C"
+        android:textColorHint="#0C0C0C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenViewModificar" />
+
+    <ImageView
+        android:id="@+id/imagenViewModificar"
+        android:layout_width="128dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="verImagenCompleta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/camara" />
+
+    <ImageButton
+        android:id="@+id/btnBuscar"
+        android:layout_width="40dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="72dp"
+        android:background="#001B1A1A"
+        android:contentDescription="@string/app_name"
+        android:tint="#FAF6F6"
+        android:onClick="modficarDatos"
+        app:layout_constraintStart_toEndOf="@+id/txtBtitulo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLetraCnacionM">
+
+        <ImageButton
+            android:id="@+id/btnFoto2"
+            android:layout_width="61dp"
+            android:layout_height="59dp"
+            android:onClick="hacerFoto"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <ImageButton
+            android:id="@+id/btnEliminar"
+            android:layout_width="61dp"
+            android:layout_height="59dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="eliminarCancion"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+
+        <ImageButton
+            android:id="@+id/btnGuardarM"
+            android:layout_width="61dp"
+            android:layout_height="59dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="actualizarDatos"
+            app:srcCompat="@android:drawable/ic_menu_save" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

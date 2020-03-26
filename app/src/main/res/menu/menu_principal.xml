@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/casa"
+        android:title="Home"
+        android:id="@+id/home"
+        app:showAsAction="always"></item>
+
+    <item
+        android:id="@+id/mapa"
+        android:icon="@drawable/mapa"
+        android:title="GPS"
+        app:showAsAction="always"></item>
+    <item
+        android:id="@+id/action_settings"
+        app:showAsAction="never"
+        android:title="Acerca de...">
+    </item>
+
+</menu>
